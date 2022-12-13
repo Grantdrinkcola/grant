@@ -42,6 +42,8 @@ import {MenubarModule} from 'primeng/menubar';
 import { AddtvComponent } from './addtv/addtv.component';
 import { UserdetailComponent } from './userdetail/userdetail.component';
 import { AddfriendsComponent } from './addfriends/addfriends.component';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -85,7 +87,8 @@ import { AddfriendsComponent } from './addfriends/addfriends.component';
     OrderListModule,
     MenubarModule
   ],
-  providers: [MessageService, ConfirmationService,DialogService],
+  providers: [MessageService, ConfirmationService,DialogService,
+                { provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
