@@ -87,8 +87,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     OrderListModule,
     MenubarModule
   ],
-  providers: [MessageService, ConfirmationService,DialogService,
-                { provide: LocationStrategy, useClass: HashLocationStrategy }],
+  providers: [MessageService, ConfirmationService,DialogService,{ provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
