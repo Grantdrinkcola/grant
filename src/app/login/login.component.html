@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>login UI</title>
+</head>
+
+<body>
+    <div class="box">
+        <h2>login</h2>
+        <form>
+            <div class="inputBox">
+                <input type="text" [(ngModel)]="loginform.email" name="email">
+                <label>email</label>
+            </div>
+            <div class="inputBox">
+                <input type="password" [(ngModel)]="loginform.password" name="password">
+                <label>password</label>
+            </div>
+            <div class="card">
+                <p-toast></p-toast>
+
+                <p-captcha siteKey="6Lf2XQkTAAAAANcvOwYqPxWL4iZDksFqHpS39GDA" (onResponse)="showResponse($event)"></p-captcha>
+            </div>
+            <input type="submit" name="" value="login" (click)="login()">
+            <input type="submit" style="margin-left: 30px;" name="" value="register" [routerLink]="['/registeruser']">
+
+        </form>
+
+    </div>
+</body>
+
+</html>
+<p-toast>
+</p-toast>
