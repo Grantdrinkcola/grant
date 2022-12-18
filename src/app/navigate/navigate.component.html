@@ -1,0 +1,9 @@
+<p-menubar [model]="items">
+    <button pButton label="Logout " icon="pi pi-power-off " [routerLink]="['/login']"></button>
+    <button pButton label="add " icon="pi pi-power-off " (click)="add()"></button>
+    <button pButton label="detail " icon="pi pi-power-off " (click)="detail()"></button>
+    <div>
+        welcome:{{name}}
+    </div>
+
+</p-menubar>

@@ -1,0 +1,17 @@
+<app-navigate></app-navigate>
+<p-orderList [value]="tvlist" [listStyle]="{'max-height':'30rem'}" header="List of tvlist" filterBy="name" filterPlaceholder="Filter by name" [dragdrop]="true">
+    <ng-template let-product pTemplate="item">
+        <div class="product-item">
+            <div class="image-container">
+                <img style="height:200px;width:500px;" src="https://gryblob.blob.core.windows.net{{product.filePath}}">
+            </div>
+            <div class="product-list-detail">
+                <h5 class="mb-2">{{product.name}}</h5>
+                <i class="pi pi-tag product-category-icon"></i>
+                <span class="product-category">{{product.username}}</span>
+            </div>
+            <button pButton pRipple type="button" label="detail" class="p-button-outlined p-button-secondary" (click)="detail(product.id)"></button>
+
+        </div>
+    </ng-template>
+</p-orderList>
